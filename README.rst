@@ -1,14 +1,14 @@
 About
------
+=====
 Salt is a Python-based provisioning utility like Chef or Puppet. It uses the concepts of master, minions, and state files. 
 A master is a machine that tells minions what software it should install. State files are conf files that describe what software 
 needs to be loaded into a minion.
 
 Setup
------
+=====
 
 1. Create and connect to Vagrant box
-
+------------------------------------
 .. code:: bash
   
   Download VirtualBox + extensions: https://www.virtualbox.org/wiki/Downloads
@@ -20,7 +20,7 @@ Setup
   $ vagrant ssh
 
 2. Install Salt stack
-
+--------------------
 .. code:: bash
   
   $ sudo apt-get update
@@ -31,16 +31,19 @@ Setup
   $ curl -L http://bootstrap.saltstack.org | sudo sh
   
 
-3. Edit minion and master files
+3. Edit minion and master files:
+------------------------------
 
-a. Goto and run `sudo  /etc/salt/minion` and give your minion a nickname. Locate the line #id:, and  remove the # and add a name id: `myminion`. 
-(This name can be anything you want.)
+A. Goto and run `sudo  /etc/salt/minion` and give your minion a nickname. Locate the line #id:, and  remove the # and add a name id: `myminion`. 
+  (This name can be anything you want.)
 
-b. Next goto the directory and run `sudo vim /etc/salt/master` Uncomment the line # master: salt by removing the # and replacing salt with the your master's IP address. 
-It now should look like this: master: your.ip.address.here. (If you're doing this locally on the same machine, you can add 127.0.0.1.)
+B. Next goto the directory and run `sudo vim /etc/salt/master` Uncomment the line # master: salt by removing the # and replacing salt with the your master's IP address. 
+  It now should look like this: master: your.ip.address.here. (If you're doing this locally on the same machine, you can add 127.0.0.1.)
 
-c. Check connection
-sudo salt '*' 
+C. Check connection
+  sudo salt '*' 
+
+
 
 4. Create state files
 
