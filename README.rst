@@ -7,10 +7,14 @@ needs to be loaded into a minion.
 Setup
 -----
 1. Create and connect to Vagrant box
-vagrant init
-vagrant add 
-vagrant up
-vagrant ssh
+
+.. code:: bash
+  # Download VirtualBox + extensions: https://www.virtualbox.org/wiki/Downloads
+  # Download Vagrant: https://www.vagrantup.com/downloads
+  $ vagrant init 
+  $ vagrant box add devserver http://files.vagrantup.com/precise32.box
+  $ vagrant up
+  $ vagrant ssh
 
 2. Install Salt stack
 
