@@ -7,7 +7,7 @@ needs to be loaded into a minion.
 Included in this repo are:
 
 1. The ``minion`` and ``master`` files in ``/etc/salt``
-2. Salt state files for install Python which are located in ``/srv/salt``
+2. Salt state files for a Python installation which are located in ``/srv/salt``
 
 
 Setup
