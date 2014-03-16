@@ -42,3 +42,10 @@ sudo salt '*'
 
 5. Run state files
 sudo salt '*' state.highstate
+
+
+References
+=========
+Getting Started with Salt: http://www.linuxjournal.com/content/getting-started-salt-stack-other-configuration-management-system-built-python?page=0,1 
+Salt Install Doc: http://docs.saltstack.com/topics/installation/index.html
+Salt + Docker : http://karlgrz.com/testing-salt-states-rapidly-with-docker/
