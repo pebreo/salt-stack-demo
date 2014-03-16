@@ -34,18 +34,15 @@ Setup
 3. Edit minion and master files:
 ------------------------------
 
-A. Goto and run `sudo  /etc/salt/minion` and give your minion a nickname. Locate the line #id:, and  remove the # and add a name id: `myminion`. 
-  (This name can be anything you want.)
+1. Goto and run ``sudo  /etc/salt/minion`` and give your minion a nickname. Locate the line #id:, and  remove the # and add a name id: `myminion`. (This name can be anything you want.)
 
-B. Next goto the directory and run `sudo vim /etc/salt/master` Uncomment the line # master: salt by removing the # and replacing salt with the your master's IP address. 
-  It now should look like this: master: your.ip.address.here. (If you're doing this locally on the same machine, you can add 127.0.0.1.)
+2. Then goto the directory and run ``sudo vim /etc/salt/master`` Uncomment the line # master: salt by removing the # and replacing salt with the your master's IP address. It now should look like this: master: your.ip.address.here. (If you're doing this locally on the same machine, you can add 127.0.0.1.)
 
-C. Check connection
-  sudo salt '*' 
-
-
+3. Next create the minion's keys. You can type ``salt-key -L`` to show all keys that need to be accepted. You should see that ``myminion`` key is not accepted yet. To accept you type ``sudo salt-key -a myminion``.
 
 4. Create state files
+-------------------
+
 
 5. Run state files
 sudo salt '*' state.highstate
