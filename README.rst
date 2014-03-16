@@ -4,6 +4,12 @@ Salt is a Python-based provisioning utility like Chef or Puppet. It uses the con
 A master is a machine that tells minions what software it should install. State files are conf files that describe what software 
 needs to be loaded into a minion.
 
+Included in this repo are:
+
+1. The ``minion`` and ``master`` files in ``/etc/salt``
+2. Salt state files for install Python which are located in ``/srv/salt``
+
+
 Setup
 =====
 
